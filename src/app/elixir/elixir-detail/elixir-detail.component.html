@@ -1,0 +1,25 @@
+<section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+        <app-spinner *ngIf="loading"></app-spinner>
+        <ng-container *ngIf="!loading" >
+          <div *ngIf="elixir.id">id:  {{ elixir.id }}</div>
+          <div *ngIf="elixir.name">name: {{ elixir.name }}</div>
+          <div *ngIf="elixir.effect">effect: {{ elixir.effect }}</div>
+          <div *ngIf="elixir.sideEffects">side effects: {{ elixir.sideEffects }}</div>
+          <div *ngIf="elixir.characteristics">characteristics {{ elixir.characteristics }}</div>
+          <div *ngIf="elixir.difficulty">difficulty: {{ elixir.difficulty }}</div>
+          <div *ngIf="elixir.manufacturer">manufacturer: {{ elixir.manufacturer }}</div>
+          <div *ngIf="elixir.time">time: {{ elixir.time }}</div>
+          <ng-container *ngIf="elixir.ingredients.length > 0" >
+            ingredients: 
+            <span *ngFor="let ingredient of elixir.ingredients">{{ ingredient.name }} </span>
+          </ng-container>
+          <div>
+          <ng-container *ngIf="elixir.inventors.length > 0" >
+            inventors: 
+            <span *ngFor="let inventor of elixir.inventors">{{ inventor.firstName }} - {{ inventor.lastName }} </span>
+          </ng-container>
+          </div>
+        </ng-container>
+    </div>
+</section>

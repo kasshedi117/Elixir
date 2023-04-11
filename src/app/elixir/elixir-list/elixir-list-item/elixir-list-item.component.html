@@ -1,0 +1,16 @@
+<div class="p-4">
+    <div
+        class="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
+        <div class="p-6">
+            <h1 class="title-font text-lg font-medium text-gray-600 mb-3">{{elixir.name}}</h1>
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">effect: {{elixir.effect}}</h2>
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">sideEffects: {{elixir.sideEffects}}</h2>
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">ingredients:</h2>
+            
+            <div class="flex items-center flex-wrap ">
+                <span *ngFor="let item of elixir.ingredients" 
+                    class="bg-gradient-to-r from-cyan-400 mx-auto to-blue-400 drop-shadow-md  shadow-cla-blue px-4 py-1 rounded-lg">{{item.name}}</span>
+            </div>
+        </div>
+    </div>
+</div>
